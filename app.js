@@ -1,14 +1,23 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const cookieParser = require('cookie-parser');
 
 // create the app
 const app = express();
+
 app.use(bodyParser.urlencoded({extended: false}));
+app.use(cookieParser());
+
 app.set('view engine', 'pug');
 
 // routes
 app.get('/', (req, res) => {
-    res.render('index');
+    const name = req.cookies.username;
+    if (name) {
+        res.render('index', {name});
+    } else {
+        res.redirect('/hello');
+    }
 });
 app.get('/cards', (req, res) => {
     res.render('card', {
@@ -17,12 +26,17 @@ app.get('/cards', (req, res) => {
     });
 });
 app.get('/hello', (req, res) => {
-    res.render('hello');
+    const name = req.cookies.username;
+    if (name) {
+        res.redirect('/');
+    } else {
+        res.render('hello');
+    }
 });
 // post route
 app.post('/hello', (req, res) => {
-    console.dir(req.body.username);
-    res.render('hello');
+    res.cookie('username', req.body.username);
+    res.redirect('/');
 });
 
 // start the app
