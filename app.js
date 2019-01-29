@@ -33,10 +33,14 @@ app.get('/hello', (req, res) => {
         res.render('hello');
     }
 });
-// post route
+// post routes
 app.post('/hello', (req, res) => {
     res.cookie('username', req.body.username);
     res.redirect('/');
+});
+app.post('/goodbye', (req, res) => {
+    res.clearCookie('username');
+    res.redirect('/hello');
 });
 
 // start the app
