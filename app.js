@@ -10,6 +10,18 @@ app.use(cookieParser());
 
 app.set('view engine', 'pug');
 
+// middleware examples
+app.use((req, res, next) => {
+    console.log("Hello");
+    next();
+});
+
+app.use((req, res, next) => {
+    console.log("World");
+    next();
+});
+
+
 // routes
 app.get('/', (req, res) => {
     const name = req.cookies.username;
