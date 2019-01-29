@@ -14,6 +14,13 @@ app.get('/cards', (req, res) => {
         hint: "Think about whose tomb it is."
     });
 });
+app.get('/hello', (req, res) => {
+    res.render('hello');
+});
+// post route
+app.post('/hello', (req, res) => {
+    res.render('hello');
+});
 
 // start the app
 app.listen(3000, () => {
