@@ -1,7 +1,9 @@
 const express = require('express');
+const bodyParser = require('body-parser');
 
 // create the app
 const app = express();
+app.use(bodyParser.urlencoded({extended: false}));
 app.set('view engine', 'pug');
 
 // routes
@@ -19,6 +21,7 @@ app.get('/hello', (req, res) => {
 });
 // post route
 app.post('/hello', (req, res) => {
+    console.dir(req.body.username);
     res.render('hello');
 });
 
