@@ -25,15 +25,14 @@ router.get('/:id', (req, res) => {
     if (side === 'question') {
         templateData.hint = hint;
         templateData.otherSide = 'answer';
+        res.render('card', templateData);
     } else if (side === 'answer') {
         templateData.otherSide = 'question';
+        res.render('card', templateData);
+    } else {
+        cardRedirect(res, id);
     }
 
-    if (!side) {
-        cardRedirect(res, id);
-    } else {
-        res.render('card', templateData);
-    }
 });
 
 module.exports = router;
