@@ -1,11 +1,10 @@
 extends layout.pug
 
 block content
-    section#content
-        h2= text
-        if hint
-            p
-                i Hint: #{hint}
-        a(href=`/cards/${id}?side=${otherSide}` style="text-transform: capitalize;") #{otherSide}
-        br
-        a(href='/cards') Next card
+    h2= text
+    if hint
+        p
+            i Hint: #{hint}
+    a(href=`/cards/${id}?side=${otherSide}` style="text-transform: capitalize;") #{otherSide}
+    br
+    a(href='/cards') Next card
