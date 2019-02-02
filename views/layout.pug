@@ -5,12 +5,13 @@ html(lang="en")
         link(rel="stylesheet", href="/static/stylesheets/style.css")
     body
         include includes/header.pug
-        section.namecard
-            .namecard-hello
-                if name
-                    p.namecard-greeting Welcome, #{name}!
-                    form.namecard-exit(action="/goodbye", method="post")
-                        button(type='submit')
-                            img(src="/static/img/close.svg")
-            block namecard
-        block content
+        block main
+            section.namecard
+                .namecard-hello
+                    if name
+                        p.namecard-greeting Welcome, #{name}!
+                        form.namecard-exit(action="/goodbye", method="post")
+                            button(type='submit')
+                                img(src="/static/img/close.svg")
+                block namecard
+            block content

@@ -2,6 +2,10 @@
 
 /* Flash Card Styles */
 
+* {
+  border: 1px solid transparent;
+}
+
 body {
   position: relative;
 }
@@ -57,6 +61,7 @@ input {
   margin-top: 50px;
   background-color: #fff;
   border: 2px #D64226 solid;
+  border-radius: 10px;
   font-size: 1em;
   padding: 8px 10px;
   color: #D64226;
@@ -83,6 +88,11 @@ input {
   color: #727C85;
   text-align: center;
   border-radius: 20px;
+  border: none;
+}
+
+.namecard-hello {
+  border: none;
 }
 
 .namecard-login {
@@ -264,6 +274,7 @@ input {
 
 .card-flip-wrap {
   position: absolute;
+  float: left;
   bottom: 10px;
   left: 20px;
 }
