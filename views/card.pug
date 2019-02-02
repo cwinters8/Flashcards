@@ -2,9 +2,9 @@ extends layout.pug
 
 block content
     section.flashcards
-        .card.card-question
+        .card(class=`card-${side}`)
             .card-header
-            h1.card-title #{title}
+            h1.card-title #{side}
             #content
                 h2= text
                 if hint
