@@ -134,10 +134,10 @@ input {
 .namecard-submit {
   margin-top: 50px;
   background-color: #fff;
-  border: 2px darkred solid;
+  border: 2px rgb(214,66,38) solid;
   font-size: 1em;
   padding: 8px 10px;
-  color: darkred;
+  color: rgb(214,66,38);
   font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
   width: 100%;
   display: block;
@@ -146,7 +146,7 @@ input {
 }
 
 .namecard-submit:hover {
-  background-color: darkred;
+  background-color: rgb(214,66,38);
   color: #fff;
   cursor: pointer;
   -webkit-transition: all 0.3s;

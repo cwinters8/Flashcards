@@ -13,5 +13,7 @@ html(lang="en")
                         form.namecard-exit(action="/goodbye", method="post")
                             button(type='submit')
                                 img(src="/static/img/close.svg")
+                    else
+                        p.namecard-greeting Hello, student!
                 block namecard
             block content
