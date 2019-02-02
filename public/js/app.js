@@ -9,6 +9,6 @@ document.addEventListener('DOMContentLoaded', (e) => {
     hintShowButton.addEventListener('click', (e) => {
       hint.style.display = '';
       e.target.style.display = 'none';
-    })
+    });
   }
-})
+});

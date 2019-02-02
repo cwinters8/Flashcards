@@ -25,9 +25,11 @@ router.get('/:id', (req, res) => {
     if (side === 'question') {
         templateData.hint = hint;
         templateData.otherSide = 'answer';
+        templateData.title = 'Question';
         res.render('card', templateData);
     } else if (side === 'answer') {
         templateData.otherSide = 'question';
+        templateData.title = 'Answer';
         res.render('card', templateData);
     } else {
         cardRedirect(res, id);
