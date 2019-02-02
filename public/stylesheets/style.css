@@ -98,7 +98,11 @@ input {
 .namecard-greeting {
   font-size: 1em;
   font-weight: 400;
-  width: 50%;
+  /* width: 50%; */
+  margin: 0;
+  float: left;
+  margin-top: 10px;
+  margin-left: 10px;
 }
 
 .namecard-form {
@@ -120,18 +124,19 @@ input {
 .namecard-submit {
   margin-top: 50px;
   background-color: #fff;
-  border: 2px #D64226 solid;
+  border: 2px darkred solid;
   font-size: 1em;
   padding: 8px 10px;
-  color: #D64226;
+  color: darkred;
   font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
   width: 100%;
   display: block;
   box-sizing: border-box;
+  border-radius: 20px;
 }
 
 .namecard-submit:hover {
-  background-color: #D64226;
+  background-color: darkred;
   color: #fff;
   cursor: pointer;
   -webkit-transition: all 0.3s;
@@ -141,12 +146,18 @@ input {
 }
 
 .namecard-exit {
-  width: 50%;
+  /* width: 50%; */
   text-align: right;
+  margin: 0;
+  float: right;
+}
+
+.namecard-exit, .namecard-exit * {
+  background-color: transparent;
 }
 
 .namecard-exit button {
-  background-color: #F5F3ED;
+  /* background-color: #F5F3ED; */
   border: none;
   margin-top: 2px;
   outline: none;
@@ -255,7 +266,6 @@ input {
   position: absolute;
   bottom: 10px;
   left: 20px;
-  padding-left: 500px:
 }
 
 .card-flip {
