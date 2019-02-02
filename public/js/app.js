@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', (e) => {
-  const hint = document.querySelector('.hint');
+  const hint = document.querySelector('#hint');
   if (hint) {
     const hintShowButton = document.createElement('BUTTON');
     hintShowButton.textContent = 'Show hint';
